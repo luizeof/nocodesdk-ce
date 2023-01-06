@@ -65,7 +65,7 @@ class BasicValidation extends HandleData
                 'data' => [
                     'success' => true,
                     'input' => $this->inputData,
-                    'output' => (EmailValidatorFactory::create($this->email))
+                    'output' => (EmailValidatorFactory::create(strtolower($this->email)))
                         ->getValidationResults()
                         ->asArray()
                 ]
