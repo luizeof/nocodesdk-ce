@@ -3,7 +3,7 @@ set -e
 
 cd /var/www/html
 
-set > "/var/www/html/.env"
+export > "/var/www/html/.env"
 
 sudo -u www-data php /var/www/html/artisan config:clear
 
