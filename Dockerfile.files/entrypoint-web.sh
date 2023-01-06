@@ -3,8 +3,6 @@ set -e
 
 cd /var/www/html
 
-cp -f /var/www/html/.env.prod /var/www/html/.env
-
 sudo -u www-data php /var/www/html/artisan config:clear
 
 sudo -u www-data php /var/www/html/artisan route:clear
