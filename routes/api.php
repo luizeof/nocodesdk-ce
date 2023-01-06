@@ -27,16 +27,13 @@ Route::prefix('v1')->group(function () {
         Route::prefix('email-address')->name('email-address')->group(function () {
             Route::get('/basic-validation', [V1\EmailAddress\BasicValidationController::class, "handle"])
                 ->name('basic-validation');
-
-            Route::get('/check-disposable', [V1\EmailAddress\DisposableController::class, "handle"])
-                ->name('check-disposable');
         });
         /**
          * Person Name
          */
-        Route::prefix('person-name')->name('person-name')->group(function () {
-            Route::get('/normalize', [V1\PersonName\NormalizeController::class, "handle"])
-                ->name('normalize');
+        Route::prefix('person')->name('person')->group(function () {
+            Route::get('/name', [V1\PersonName\NormalizeController::class, "handle"])
+                ->name('name');
         });
         /**
          * Phone Number

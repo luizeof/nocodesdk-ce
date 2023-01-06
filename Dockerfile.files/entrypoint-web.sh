@@ -17,7 +17,7 @@ sudo -u www-data php /var/www/html/artisan view:cache
 
 sudo -u www-data php /var/www/html/artisan config:cache
 
-sudo -u www-data php /var/www/html/artisan db:migrate
+sudo -u www-data php /var/www/html/artisan migrate
 
 sudo -u www-data php /var/www/html/artisan app:setup:user
 
