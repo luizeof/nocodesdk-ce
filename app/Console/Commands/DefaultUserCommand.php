@@ -34,6 +34,7 @@ class DefaultUserCommand extends Command
                 'name' => 'Admin',
                 'email' => 'admin@admin.com',
                 'password' => 'MasterKey2',
+                'password_confirmation' => 'MasterKey2',
                 'terms' => true,
             ]);
         }
