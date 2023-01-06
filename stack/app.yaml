@@ -1,0 +1,40 @@
+version: "3.7"
+
+services:
+
+  nocodesdk:
+    image: luizeof/nocodesdk:latest
+    networks:
+      - network_public
+    entrypoint: "/entrypoint-web.sh"
+    command: "php -d variables_order=EGPCS /var/www/html/artisan --workers=1 octane:start --server=swoole --host=0.0.0.0 --port=80"
+    environment:
+      - APP_DEBUG=false
+      - APP_ENV=production
+      - TELESCOPE_ENABLED=false
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.role == manager
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.nocodesdk.rule=Host(`app.nocodesdk.com`)"
+        - "traefik.http.routers.nocodesdk.entrypoints=websecure"
+        - "traefik.http.routers.nocodesdk.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.nocodesdk.loadbalancer.server.port=80"
+
+  redis:
+    image: redis:latest
+    command: ["redis-server", "--appendonly", "yes"]
+    networks:
+      - network_public
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+
+networks:
+  network_public:
+    external: true
+    name: network_swarm_public

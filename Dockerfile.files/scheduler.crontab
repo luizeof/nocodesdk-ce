@@ -1,0 +1,4 @@
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+* * * * *   root  php /var/www/html/artisan schedule:run --verbose --no-interaction > /var/www/html/storage/logs/scheduler.cron.log
