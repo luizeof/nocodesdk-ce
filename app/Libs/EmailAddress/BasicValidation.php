@@ -60,14 +60,18 @@ class BasicValidation extends HandleData
     protected function handle()
     {
         try {
+            $data = (EmailValidatorFactory::create(strtolower($this->email)))
+                ->getValidationResults()
+                ->asArray();
+
+            $data["email"] = strtolower($this->email);
+
             $this->outputData = [
                 'processed' => true,
                 'data' => [
                     'success' => true,
                     'input' => $this->inputData,
-                    'output' => (EmailValidatorFactory::create(strtolower($this->email)))
-                        ->getValidationResults()
-                        ->asArray()
+                    'output' => $data
                 ]
             ];
         } catch (Throwable $exception) {
