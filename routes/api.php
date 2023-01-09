@@ -22,28 +22,25 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::prefix('v1')->group(function () {
     Route::middleware(['auth:sanctum'])->group(function () {
         /**
-         * Email Address
+         * Email Address Module
          */
         Route::prefix('email-address')->name('email-address')->group(function () {
-            Route::get('/basic-validation', [V1\EmailAddress\BasicValidationController::class, "handle"])
-                ->name('basic-validation');
+            Route::get('/basic-validation', [V1\EmailAddress\BasicValidationController::class, "handle"])->name('basic-validation');
         });
         /**
-         * Person Name
+         * Person Name Module
          */
         Route::prefix('person')->name('person')->group(function () {
-            Route::get('/name', [V1\PersonName\NormalizeController::class, "handle"])
-                ->name('name');
+            Route::get('/name', [V1\PersonName\NormalizeController::class, "handle"])->name('name');
         });
         /**
-         * Phone Number
+         * Phone Number Module
          */
         Route::prefix('phone-number')->name('phone-number')->group(function () {
-            Route::get('/validation', [V1\PhoneNumber\ValidationController::class, "handle"])
-                ->name('validation');
+            Route::get('/validation', [V1\PhoneNumber\ValidationController::class, "handle"])->name('validation');
         });
         /**
-         * Text
+         * Text Module
          */
         Route::prefix('text')->name('text')->group(function () {
             Route::get('/mask', [V1\Text\MaskController::class, "handle"])->name('mask');

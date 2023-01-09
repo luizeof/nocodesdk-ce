@@ -4,8 +4,8 @@
  * Lib Namespace
  * php version 8
  *
- * @category Model
- * @package  StackingWidgets
+ * @category Library
+ * @package  NocodeSDK
  * @author   Luiz Eduardo Oliveira Fonseca <luizeof@gmail.com>
  * @license  http://www.php.net/license/3_01.txt  PHP License 3.01
  * @link     https://github.com/luizeof/stackingwidgets
@@ -18,8 +18,8 @@ use App\Libs\HandleData;
 /**
  * Describe this Class
  *
- * @category Lib
- * @package  StackingWidgets
+ * @category Library
+ * @package  NocodeSDK
  * @author   Luiz Eduardo Oliveira Fonseca <luizeof@gmail.com>
  * @license  http://www.php.net/license/3_01.txt  PHP License 3.01
  * @link     http://pear.php.net/package/PackageName

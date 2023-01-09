@@ -4,13 +4,12 @@
  * Lib Namespace
  * php version 8
  *
- * @category Model
- * @package  StackingWidgets
+ * @category EmailAddress
+ * @package  NocodeSDK
  * @author   Luiz Eduardo Oliveira Fonseca <luizeof@gmail.com>
  * @license  http://www.php.net/license/3_01.txt  PHP License 3.01
  * @link     https://github.com/luizeof/stackingwidgets
  */
-
 namespace App\Libs\EmailAddress;
 
 use Throwable;
@@ -18,10 +17,10 @@ use App\Libs\HandleData;
 use EmailValidation\EmailValidatorFactory;
 
 /**
- * Describe this Class
+ * Validação Básica de E-mail
  *
- * @category Lib
- * @package  StackingWidgets
+ * @category EmailAddress
+ * @package  NocodeSDK
  * @author   Luiz Eduardo Oliveira Fonseca <luizeof@gmail.com>
  * @license  http://www.php.net/license/3_01.txt  PHP License 3.01
  * @link     http://pear.php.net/package/PackageName
@@ -41,9 +40,9 @@ class BasicValidation extends HandleData
     }
 
     /**
-     * Run the Class and return output
+     * Run the Workflow and return output
      *
-     * @param string $email User Agent String
+     * @param string $email Email to Validate
      *
      * @return array
      */
