@@ -31,7 +31,7 @@ Route::prefix('v1')->group(function () {
          * Person Name Module
          */
         Route::prefix('person')->name('person')->group(function () {
-            Route::get('/name', [V1\PersonName\NormalizeController::class, "handle"])->name('name');
+            Route::get('/name', [V1\Person\NameController::class, "handle"])->name('name');
         });
         /**
          * Phone Number Module

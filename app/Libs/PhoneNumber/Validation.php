@@ -1,16 +1,5 @@
 <?php
 
-/**
- * Lib Namespace
- * php version 8
- *
- * @category PhoneNumber
- * @package  NocodeSDK
- * @author   Luiz Eduardo Oliveira Fonseca <luizeof@gmail.com>
- * @license  http://www.php.net/license/3_01.txt  PHP License 3.01
- * @link     https://github.com/luizeof/stackingwidgets
- */
-
 namespace App\Libs\PhoneNumber;
 
 use Throwable;
@@ -19,23 +8,9 @@ use League\ISO3166\ISO3166;
 use Propaganistas\LaravelPhone\PhoneNumber;
 use App\Exceptions\PhoneNumber\InvalidPhoneNumberException;
 
-/**
- * Validates Phone Number
- *
- * @category PhoneNumber
- * @package  NocodeSDK
- * @author   Luiz Eduardo Oliveira Fonseca <luizeof@gmail.com>
- * @license  http://www.php.net/license/3_01.txt  PHP License 3.01
- * @link     http://pear.php.net/package/PackageName
- */
 class Validation extends HandleData
 {
-    /**
-     * Initialize this Class
-     *
-     * @param string $phone Phone Number
-     * @param string $country Country Code
-     */
+
     public function __construct($phone, $country)
     {
         $this->phone = ($phone);
@@ -43,24 +18,11 @@ class Validation extends HandleData
         return $this->handle();
     }
 
-    /**
-     * Run the Workflow and return output
-     *
-     * @param string $phone Phone Number
-     * @param string $country Country Code
-     *
-     * @return array
-     */
     public static function run($phone, $country = null)
     {
         return (new self($phone, $country))->getOutputData();
     }
 
-    /**
-     * Execution Workflow
-     *
-     * @return array
-     */
     public function detectCountry()
     {
         if (strlen($this->country) > 0) {

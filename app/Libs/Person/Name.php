@@ -1,59 +1,24 @@
 <?php
 
-/**
- * Lib Namespace
- * php version 8
- *
- * @category Person
- * @package  NocodeSDK
- * @author   Luiz Eduardo Oliveira Fonseca <luizeof@gmail.com>
- * @license  http://www.php.net/license/3_01.txt  PHP License 3.01
- * @link     https://github.com/luizeof/stackingwidgets
- */
-namespace App\Libs\PersonName;
+namespace App\Libs\Person;
 
 use Throwable;
 use App\Libs\HandleData;
 
-/**
- * Normalize Person Name
- *
- * @category Person
- * @package  NocodeSDK
- * @author   Luiz Eduardo Oliveira Fonseca <luizeof@gmail.com>
- * @license  http://www.php.net/license/3_01.txt  PHP License 3.01
- * @link     http://pear.php.net/package/PackageName
- */
-class Normalize extends HandleData
+class Name extends HandleData
 {
-    /**
-     * Initialize this Class
-     *
-     * @param string $name Person Name to Validate
-     */
+
     public function __construct($name)
     {
         $this->name = $name;
         return $this->handle();
     }
 
-    /**
-     * Run the Workflow and return output
-     *
-     * @param string $name Person Name to Validate
-     *
-     * @return array
-     */
     public static function run($name)
     {
         return (new self($name))->getOutputData();
     }
 
-    /**
-     * Execution Workflow
-     *
-     * @return void
-     */
     protected function handle()
     {
         try {

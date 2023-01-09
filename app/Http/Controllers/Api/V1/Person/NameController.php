@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Http\Controllers\Api\V1\PersonName;
+namespace App\Http\Controllers\Api\V1\Person;
 
-use App\Libs\PersonName\Normalize;
+use App\Libs\Person\Name;
 use App\Http\Controllers\Api\Controller;
 use App\Http\Requests\PersonName\NormalizeRequest;
 
-class NormalizeController extends Controller
+class NameController extends Controller
 {
     public function handle(NormalizeRequest $request)
     {
-        $output = Normalize::run($request->name);
+        $output = Name::run($request->name);
         return $this->jsonResponse($request, $output);
     }
 }
