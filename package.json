@@ -11,7 +11,7 @@
     },
     "devDependencies": {
         "@tailwindcss/forms": "^0.4.0",
-        "@tailwindcss/typography": "^0.5.0",
+        "@tailwindcss/typography": "github:tailwindcss/typography",
         "alpinejs": "^3.0.6",
         "axios": "^0.25",
         "laravel-mix": "^6.0.6",

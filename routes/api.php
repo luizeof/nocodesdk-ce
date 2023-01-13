@@ -24,7 +24,7 @@ Route::prefix('v1')->group(function () {
         /**
          * Email Address Module
          */
-        Route::prefix('email-address')->name('email-address')->group(function () {
+        Route::prefix('email')->name('email-address')->group(function () {
             Route::get('/basic-validation', [V1\EmailAddress\BasicValidationController::class, "handle"])->name('basic-validation');
         });
         /**
@@ -36,7 +36,7 @@ Route::prefix('v1')->group(function () {
         /**
          * Phone Number Module
          */
-        Route::prefix('phone-number')->name('phone-number')->group(function () {
+        Route::prefix('phone')->name('phone-number')->group(function () {
             Route::get('/validation', [V1\PhoneNumber\ValidationController::class, "handle"])->name('validation');
         });
         /**

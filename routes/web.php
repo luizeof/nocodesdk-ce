@@ -17,12 +17,13 @@ Route::get('/', function () {
     return redirect()->to(route('dashboard'));
 });
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+});
+
+Route::middleware(['auth:sanctum', 'verified'])->prefix("docs")->name("documentation.")->group(function () {
+    Route::get("/", [App\Http\Controllers\DocumentationController::class, 'index'])->name("index");
+    Route::get("/{category}/{fname}", [App\Http\Controllers\DocumentationController::class, 'show'])->name("show");
 });

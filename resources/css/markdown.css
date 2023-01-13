@@ -1,0 +1,100 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.rich-content {
+    @apply text-base;
+    @apply prose;
+    @apply max-w-none;
+    @apply p-0;
+}
+
+.rich-content p {
+    @apply leading-6;
+    @apply mb-3;
+}
+
+
+.rich-content p code {
+    @apply px-1.5 text-slate-700 font-mono rounded-lg py-0.5 border border-slate-200 bg-slate-50 !important;
+    @apply before:content-none after:content-none;
+}
+
+.rich-content table {
+    @apply my-4;
+    @apply table-auto;
+    @apply border;
+    @apply border-collapse;
+}
+
+.rich-content table thead{
+    @apply bg-slate-50;
+}
+
+.rich-content table thead tr th,
+.rich-content table tbody tr td{
+    @apply p-2;
+}
+
+.rich-content p a {
+    @apply underline;
+    @apply text-blue-700;
+    @apply hover:text-orange-600;
+}
+
+.rich-content h2 {
+    @apply text-2xl;
+    @apply leading-5;
+    @apply my-10;
+    @apply font-semibold;
+}
+
+.rich-content h3 {
+    @apply text-lg;
+    @apply leading-5;
+    @apply my-6;
+    @apply font-semibold;
+}
+
+.rich-content ul {
+    @apply list-disc;
+    @apply list-inside;
+    @apply pl-3;
+}
+
+.rich-content ol {
+    @apply list-decimal;
+    @apply list-inside;
+    @apply pl-3;
+}
+
+.rich-content ul li {}
+
+.rich-content ol li {}
+
+.rich-content figure {
+    @apply py-6;
+    @apply mx-auto;
+}
+
+.rich-content img {
+    @apply mx-auto;
+}
+
+.rich-content figure img {
+    @apply mx-auto;
+}
+
+.rich-content code {}
+
+.rich-content pre {
+    background-color: transparent !important;
+    @apply text-black;
+    @apply border rounded-md;
+}
+
+
+.rich-content code,
+.rich-content pre {
+
+}
