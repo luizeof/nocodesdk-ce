@@ -40,7 +40,7 @@
             <div class="text-center">
                 <p class="text-lg font-semibold text-indigo-600">Phone API</p>
                 <h1 class="mt-1 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
-                    Validate
+                    Validation
                 </h1>
                 <p class="max-w-xl mx-auto mt-5 text-xl text-gray-500">
                     Formata e Valida números de telefone
@@ -62,7 +62,7 @@
                     <div class="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5">
                         <dt class="text-sm font-medium text-gray-900">Endpoint</dt>
                         <dd class="flex mt-1 text-base text-gray-900 sm:col-span-2 sm:mt-0">
-                            <span class="flex-grow font-mono">{{ env('APP_URL') }}/api/v1/phone/validate</span>
+                            <span class="flex-grow font-mono">{{ env('APP_URL') }}/api/v1/phone/validation</span>
                         </dd>
                     </div>
                     <div class="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5">

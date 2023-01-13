@@ -31,7 +31,7 @@
                   <svg class="flex-shrink-0 w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
                   </svg>
-                  <a href="{{ route('documentation.show', ['person','index']) }}" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700" aria-current="page">Phone</a>
+                  <a href="{{ route('documentation.show', ['phone','index']) }}" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700" aria-current="page">Phone</a>
                 </div>
               </li>
             </ol>
@@ -53,7 +53,7 @@
     <div class="px-6 py-16 mx-auto max-w-7xl sm:py-24 lg:px-8">
         <div class="grid flex-wrap gap-8 sm:grid-cols-3">
 
-            <a href="{{ route('documentation.show', ['phone', 'validate']) }}" class="block p-6 bg-white border border-gray-200 rounded-lg">
+            <a href="{{ route('documentation.show', ['phone', 'validation']) }}" class="block p-6 bg-white border border-gray-200 rounded-lg">
                 <div
                     class="inline-flex items-center justify-center w-10 h-10 mb-4 text-indigo-500 bg-indigo-100 rounded-full">
                     <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -63,7 +63,7 @@
                     </svg>
 
                 </div>
-                <h2 class="mb-2 text-lg font-medium text-gray-900 title-font">Validate</h2>
+                <h2 class="mb-2 text-lg font-medium text-gray-900 title-font">Validation</h2>
                 <p class="text-base leading-relaxed">
                     Valida e formata um número de telefone.
                 </p>
