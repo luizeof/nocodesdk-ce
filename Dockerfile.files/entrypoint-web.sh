@@ -38,7 +38,7 @@ sudo -u www-data php /var/www/html/artisan config:cache
 
 sudo -u www-data php /var/www/html/artisan migrate --force
 
-sudo -u www-data php /var/www/html/artisan app:setup:user
+sudo -u www-data php /var/www/html/artisan app:setup:user $APP_EMAIL $APP_PASSWORD
 
 service memcached start
 
