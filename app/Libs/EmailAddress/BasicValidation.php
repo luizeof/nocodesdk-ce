@@ -11,7 +11,7 @@ class BasicValidation extends HandleData
 
     public function __construct($email)
     {
-        $this->email  = $email;
+        $this->email  = strtolower($email);
 
         return $this->handle();
     }
@@ -24,11 +24,11 @@ class BasicValidation extends HandleData
     protected function handle()
     {
         try {
-            $data = (EmailValidatorFactory::create(strtolower($this->email)))
+            $data = (EmailValidatorFactory::create(($this->email)))
                 ->getValidationResults()
                 ->asArray();
 
-            $data["email"] = strtolower($this->email);
+            $data["email"] = ($this->email);
 
             $this->outputData = [
                 'processed' => true,

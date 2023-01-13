@@ -10,7 +10,7 @@ class Name extends HandleData
 
     public function __construct($name)
     {
-        $this->name = $name;
+        $this->name = ucwords(strtolower($name));
         return $this->handle();
     }
 
