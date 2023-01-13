@@ -13,7 +13,7 @@ class DefaultUserCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'app:setup:user';
+    protected $signature = 'app:setup:user {email} {pass}';
 
     /**
      * The console command description.
@@ -29,12 +29,17 @@ class DefaultUserCommand extends Command
      */
     public function handle()
     {
+
         if (User::exists() == false) {
+
+            $email = $this->argument("email");
+            $pass = $this->argument("pass");
+
             (new CreateNewUser())->create([
                 'name' => 'Admin',
-                'email' => 'admin@admin.com',
-                'password' => 'MasterKey2',
-                'password_confirmation' => 'MasterKey2',
+                'email' => $email,
+                'password' => $pass,
+                'password_confirmation' => $pass,
                 'terms' => true,
             ]);
         }
