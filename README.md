@@ -4,6 +4,10 @@ Um conjunto de ferramentas em forma de API para facilitar o seu dia a dia.
 
 ![API Self-Hosted para Lowcoders](nocodesdk.png)
 
+### Assista a Live de Apresentação:
+
+https://youtu.be/cZIJcbM2MnA
+
 ## Deploy
 
 ```yaml
