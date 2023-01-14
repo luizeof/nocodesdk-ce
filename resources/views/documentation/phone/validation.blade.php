@@ -104,7 +104,7 @@
                                     <tr class="divide-x divide-gray-200">
                                         <td
                                             class="py-4 pl-4 pr-4 font-mono text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-6">
-                                            number
+                                            phone
                                         </td>
                                         <td class="p-4 font-mono text-sm text-gray-500 whitespace-nowrap">string</td>
                                         <td class="p-4 text-sm text-gray-500 whitespace-nowrap">
