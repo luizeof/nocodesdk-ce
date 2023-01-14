@@ -17,6 +17,7 @@
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
         "league/commonmark": "^2.3",
+        "league/iso3166": "^4.1",
         "livewire/livewire": "^2.5",
         "propaganistas/laravel-phone": "^4.3",
         "spatie/laravel-json-api-paginate": "^1.12",

@@ -57,7 +57,7 @@ class Validation extends HandleData
             $items = [];
             foreach ($countries as $code) {
                 $parser = PhoneNumber::make($this->phone, $code);
-                $items[] = [
+                $item = [
                     'validFormat' => true,
                     'E164' => $parser->formatE164(),
                     'International' => $parser->formatInternational(),
@@ -68,6 +68,22 @@ class Validation extends HandleData
                     'Numbers' => preg_replace('/[^0-9]/', '', $parser->formatE164()),
                     'Length' => strlen(preg_replace('/[^0-9]/', '', $parser->formatE164())),
                 ];
+
+                if ($item["validFormat"]) {
+                    if ($code == "BR") {
+                        $item['DDD'] = (int) substr($item['Numbers'], 2, 2);
+
+                        if ($item['DDD'] <= 30) {
+                            $item['Whatsapp'] = "55" . $item['DDD'] . substr($item['Numbers'], 4);
+                        } else {
+                            $item['Whatsapp'] = "55" . $item['DDD'] .  substr($item['Numbers'], 5);
+                        }
+                    } else {
+                        $item['Whatsapp'] = $item['Numbers'];
+                    }
+                }
+
+                $items[] = $item;
             }
 
             $this->outputData = [
