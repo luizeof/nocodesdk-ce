@@ -73,7 +73,7 @@ class Validation extends HandleData
                     if ($code == "BR") {
                         $item['DDD'] = (int) substr($item['Numbers'], 2, 2);
 
-                        if ($item['DDD'] <= 30) {
+                        if ($item['DDD'] <= 31) {
                             $item['Whatsapp'] = "55" . $item['DDD'] . substr($item['Numbers'], 4);
                         } else {
                             $item['Whatsapp'] = "55" . $item['DDD'] .  substr($item['Numbers'], 5);
