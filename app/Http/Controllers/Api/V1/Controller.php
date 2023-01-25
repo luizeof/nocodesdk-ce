@@ -27,7 +27,7 @@ abstract class Controller extends BaseController
      */
     public function jsonResponse($request, array $json): Response
     {
-        return response()->jsonApi(
+        return response()->json(
             request: $request,
             data: $json,
             endpoint: static::ENDPOINT,
